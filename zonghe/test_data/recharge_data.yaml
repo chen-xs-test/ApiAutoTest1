@@ -1,0 +1,9 @@
+# 充值数据
+- data: {"mobilephone":"18066660137","amount":"20"}
+  except: {"status":1,"code":"10001","data":{"id":3046,"regname":"???lisi","pwd":"A3F8B0E6A083555006CCFD25431352AA","mobilephone":"15815519462","leaveamount":"100.00","type":"1","regtime":"2020-12-11 16:43:18.0"},"msg":"充值成功"}
+# 充值失败，请输入数字
+- data: {"mobilephone":"18066660137","amount":"*/20"}
+  except: {"status":0,"code":"20118","data":null,"msg":"请输入数字"}
+# 充值失败，请输入范围在0到50万之间的正数金额
+- data: {"mobilephone":"18066660137","amount":"-20"}
+  except: {"status":0,"code":"20117","data":null,"msg":"请输入范围在0到50万之间的正数金额"}
